@@ -26,10 +26,7 @@ public class Calculator {
                     return ErrorMessage.getErrorMessage("UNKNOWN operation");
                 }
 
-                Double op1 = stack.pop();
-                Double op2 = stack.pop();
-
-                stack.push(op.operate(op1,op2));
+                stack.push(op.operate(stack));
             } else {
                 try {
                     stack.push(Double.parseDouble(arg));
